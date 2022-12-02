@@ -16,12 +16,12 @@ public class EnemyDestroyer : MonoBehaviour
    if(tag == "Enemy")
    {
       //Subtract the targets after the player shoots them
-      Enemyleft++;
+      Enemyleft--;
       //destroy the gameobject
       Destroy(this.gameObject); 
       //destroy the bullet
      Destroy(other.gameObject);
-      if(Enemyleft == 5)
+      if(Enemyleft == 0)
       {
          SceneManager.LoadScene(5);
       }
@@ -29,13 +29,7 @@ public class EnemyDestroyer : MonoBehaviour
       }
    }
 
-   void Update()
-   {
-      if(Enemyleft == 5)
-      {
-         SceneManager.LoadScene(5);
-      }
-   }
+ 
 
   
 }

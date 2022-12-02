@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [SerializeField] int Enemyleft = 0;
+    
     //The bullet that the player will shoot 
      public GameObject Bullet;
      //The launch velocity 

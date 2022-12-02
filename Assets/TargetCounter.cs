@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCounter : MonoBehaviour
+public class TargetCounter : MonoBehaviour
 {
+   [SerializeField] GameObject Target;
+   [SerializeField] int TargetNumber; 
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,12 @@ public class EnemyCounter : MonoBehaviour
     void Update()
     {
         
+    }
+    public void OnDestroy() 
+    {
+        if(Target)
+        {
+            TargetNumber--;
+        }
     }
 }
